@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+{% for cat in Category %}
+    {{ cat.title }} :: {{ block.super }}
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid my-5">
+        <div class="container p-3">
+            <div class="row justify-content-start">
+                {% for item in services %}
+                    <div class="col-xl-3 col-md-6 col-12 card-container  my-2">
+                        <div class="card card-front">
+                            <div class="card-body">
+                                <h4 class="card-title text-white">{{ item.title }}</h4>
+                            </div>
+                        </div>
+                        <div class="card card-back">
+                            <div class="card-body">
+                                <h2 class="card-title text-white">{{ item.price }} руб.</h2>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

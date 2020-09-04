@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+
+    Поиск :: {{ block.super }}
+
+{% endblock %}
+
+{% comment %}{% block content %}
+   <div class="container-fluid my-5">
+        <div class="container p-3">
+            <div class="row justify-content-start">
+            {% if services %}
+                {% for item in services %}
+                    <div class="col-12 p-3 text-center  " style="background-color: #067E8F">
+                        <h4 class="text-white"> {{ item.category }}</h4>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 card-container p-0 my-2">
+                        <div class="card card-front">
+                            <div class="card-body">
+                                <h4 class="card-title text-white">{{ item.title }}</h4>
+                            </div>
+                        </div>
+                        <div class="card card-back">
+                            <div class="card-body">
+                                <h2 class="card-title text-white">{{ item.price }} руб.</h2>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12 p-3 text-left  " style="background-color: #067E8F;">
+                    <h5 class="text-white">К сожалению, ничего не найдено. Возможно вы ищите товар. Каталог можно скачать перейдя в раздел «Товары»</h5>
+                </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}{% endcomment %}
+{% block content %}
+   <div class="container-fluid my-5">
+        <div class="container p-3">
+            <div class="row justify-content-start">
+            {% for cat in cats %}
+                {% for item in services %}
+                {% endfor %}
+            {% endfor %}
+                {% for item in services %}
+                    <div class="col-12 p-3 text-center  " style="background-color: #067E8F">
+                        <h4 class="text-white"> {{ item.category }}</h4>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 card-container p-0 my-2">
+                        <div class="card card-front">
+                            <div class="card-body">
+                                <h4 class="card-title text-white">{{ item.title }}</h4>
+                            </div>
+                        </div>
+                        <div class="card card-back">
+                            <div class="card-body">
+                                <h2 class="card-title text-white">{{ item.price }} руб.</h2>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

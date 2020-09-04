@@ -1,0 +1,108 @@
+#main_nav{
+    background: black;
+}
+
+body{
+    background-image: url("../images/background8.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    overflow-y: scroll;
+}
+
+section{
+    /*background-color: black;*/
+    /*background: linear-gradient(#000 70%, #0000);*/
+    background: radial-gradient(circle, #14C3DC 75%, rgba(6,6,75,0) 100%);
+    /*min-height: 500px;*/
+    padding-top: 66px;
+    padding-bottom: 100px;
+}
+footer{
+    background: #067E8F;
+}
+
+a.my-link {
+    color: white;
+}
+a.my-link:visited{
+    color:white;
+}
+a.my-link:hover{
+    color:#C4C4C4;
+    text-decoration: none;
+}
+
+.card-container{
+    position: relative;
+    perspective: 200rem;
+    height: 10rem;
+}
+
+.card-container:hover .card-front{
+    transform: rotateY(180deg);
+}
+
+.card-container:hover .card-back{
+    transform: rotateY(0deg);
+}
+
+.card-front{
+    background-color: #14C3DC;
+}
+
+.card-back{
+    transform: rotateY(180deg);
+    background-color: #18b2c9;
+}
+
+.card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.9s;
+    backface-visibility: hidden;
+}
+
+.card-back .card-body{
+    position: relative;
+}
+
+.card-body a{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin: -15% 0 0 -23%;
+}
+
+.card-back h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.worktime{
+    line-height: 2.5;
+}
+
+.caruselImg{
+    height: 500px;
+}
+
+.modal-header{
+    background-color: #067E8F ;
+}
+
+.goTop{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    color: #3597A5;
+    display: none;
+}
+.goTop:hover{
+    color: #3D747C;
+}
